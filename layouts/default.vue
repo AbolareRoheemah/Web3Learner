@@ -57,7 +57,7 @@
         <v-icon>mdi-menu</v-icon>
       </v-btn>
     </v-app-bar>
-    <v-main>
+    <v-main class="ctn">
       <!-- <v-container> -->
         <Nuxt />
       <!-- </v-container> -->
@@ -96,3 +96,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.ctn {
+  background-color: white;
+}
+</style>
