@@ -1,8 +1,8 @@
 <template>
   <div class="jumbotron">
-    <p>Master <br>Web3 <br>Technologies</p>
-    <p class="learn">Learn in-demand web3 languages and technologies quickly and effectively with hands-on projects.</p>
-    <v-btn variant="flat" size="large" class="bg-purple-darken-2 text-center py-5" color="#6366f1">Get Started Today</v-btn>
+    <p class="slide-in-left">Master <br>Web3 <br>Technologies</p>
+    <p class="learn slide-in-bottom">Learn in-demand web3 languages and technologies quickly and effectively with hands-on projects.</p>
+    <v-btn variant="flat" size="large" class="bg-purple-darken-2 text-center py-5 jumb-btn" color="#6366f1">Get Started Today</v-btn>
   </div>
 </template>
 

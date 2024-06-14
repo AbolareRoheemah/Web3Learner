@@ -17,7 +17,7 @@
               <li>Real-world projects</li>
               <li>Community support</li>
             </ul>
-          <v-btn variant="flat" size="x-large" class="bg-purple-darken-2 text-center mt-10" color="#6366f1">Join Us Now</v-btn>
+          <a href="#contact"><v-btn variant="flat" size="x-large" class="bg-purple-darken-2 text-center mt-10" color="#6366f1">Join Us Now</v-btn></a>
           </div>
         </v-col>
     </v-row>

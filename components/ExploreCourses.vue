@@ -3,7 +3,14 @@
     <v-row class="explore-ctn">
         <v-col cols="12">
             <p class="sect4-header">Explore Our Premium Courses</p>
-            <p class="sect4-subheader">Unlock your potential with our diverse range of web3 courses, crafted to guide you every step of the way.</p>
+            <p class="sect4-subheader pb-8">Unlock your potential with our diverse range of web3 courses, crafted to guide you every step of the way.</p>
+        </v-col>
+        <v-col cols="12">
+            <v-row>
+                <v-col cols="4" v-for="(course, index) in [1, 2, 3, 4, 5, 6, 7, 8, 9]" :key="index">
+                    <Course />
+                </v-col>
+            </v-row>
         </v-col>
     </v-row>
   </v-container>
@@ -20,7 +27,8 @@ export default {
     background-color: #f3f4f6;
     text-align: center;
     border-radius: 10px;
-    box-shadow: #f3f4f6;
+    box-shadow: 4px 4px #f3f4f6;
+    padding: 5vh 5vw;
 }
 .sect4-header {
   color: #000;
