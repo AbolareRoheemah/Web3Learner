@@ -7,58 +7,58 @@
         <v-col cols="12" class="" md="">
           <v-row>
             <v-col cols="3" lg="3" md="4" sm="6" @click="router.push('/courses')">
-              <div class="sect3-div">
-                <img src="@/assets/images/section3_img1.jpeg" alt="">
-                <p class="purplep">Solidity For Beginners</p>
+              <div class="sect3-div" @mouseover="isHovering1 = true" @mouseleave="isHovering1 = false">
+                <img src="@/assets/images/section3_img1.jpeg" alt="" :class="isHovering1 ? 'scale-up': 'scale-down'">
+                <p class="purplep" :class="isHovering1 ? 'p-hover bounce': ''">Solidity For Beginners</p>
                 <p class="sec3p">Dynamic and interactive learning modules to keep you engaged.</p>
               </div>
             </v-col>
             <v-col cols="3" lg="3" md="4" sm="6" @click="router.push('/courses')">
-              <div class="sect3-div">
-                <img src="@/assets/images/section3_img2.jpeg" alt="">
-                <p class="purplep">Learn Rust From Scratch</p>
+              <div class="sect3-div" @mouseover="isHovering2 = true" @mouseleave="isHovering2 = false">
+                <img src="@/assets/images/section3_img2.jpeg" alt="" :class="isHovering2 ? 'scale-up': 'scale-down'">
+                <p class="purplep" :class="isHovering2 ? 'p-hover bounce': ''">Learn Rust From Scratch</p>
                 <p class="sec3p">Learn from industry leaders and top instructors in the field.</p>
               </div>
             </v-col>
             <v-col cols="3" lg="3" md="4" sm="6" @click="router.push('/courses')">
-              <div class="sect3-div">
-                <img src="@/assets/images/section3_img3.jpeg" alt="">
-                <p class="purplep">Building on Airdao</p>
+              <div class="sect3-div" @mouseover="isHovering3 = true" @mouseleave="isHovering3 = false">
+                <img src="@/assets/images/section3_img3.jpeg" alt="" :class="isHovering3 ? 'scale-up bright': 'scale-down'">
+                <p class="purplep" :class="isHovering3 ? 'p-hover bounce': ''">Building on Airdao</p>
                 <p class="sec3p">Join a thriving community of web3 learners and builders worldwide.</p>
               </div>
             </v-col>
             <v-col cols="3" lg="3" md="4" sm="6" @click="router.push('/courses')">
-              <div class="sect3-div">
-                <img src="@/assets/images/section3_img4.jpeg" alt="">
-                <p class="purplep">Cairo: Smart Contract Development</p>
+              <div class="sect3-div" @mouseover="isHovering4 = true" @mouseleave="isHovering4 = false">
+                <img src="@/assets/images/section3_img4.jpeg" alt="" :class="isHovering4 ? 'scale-up': 'scale-down'">
+                <p class="purplep" :class="isHovering4 ? 'p-hover bounce': ''">Cairo: Smart Contract Development</p>
                 <p class="sec3p">Hands-on projects that provide real-world experience.</p>
               </div>
             </v-col>
             <v-col cols="3" lg="3" md="4" sm="6" @click="router.push('/courses')">
-              <div class="sect3-div">
-                <img src="@/assets/images/section3_img5.jpeg" alt="">
-                <p class="purplep">Bitcoin Fundamentals</p>
+              <div class="sect3-div" @mouseover="isHovering5 = true" @mouseleave="isHovering5 = false">
+                <img src="@/assets/images/section3_img5.jpeg" alt="" :class="isHovering5 ? 'scale-up': 'scale-down'">
+                <p class="purplep" :class="isHovering5 ? 'p-hover bounce': ''">Bitcoin Fundamentals</p>
                 <p class="sec3p">Boost your career with in-demand web3 skills.</p>
               </div>
             </v-col>
             <v-col cols="3" lg="3" md="4" sm="6" @click="router.push('/courses')">
-              <div class="sect3-div">
-                <img src="@/assets/images/section3_img6.jpeg" alt="">
-                <p class="purplep">The Ethereum Blockchain</p>
+              <div class="sect3-div" @mouseover="isHovering6 = true" @mouseleave="isHovering6 = false">
+                <img src="@/assets/images/section3_img6.jpeg" alt="" :class="isHovering6 ? 'scale-up': 'scale-down'">
+                <p class="purplep" :class="isHovering6 ? 'p-hover bounce': ''">The Ethereum Blockchain</p>
                 <p class="sec3p">Learn all about ethereum at your own pace with our flexible schedule options.</p>
               </div>
             </v-col>
             <v-col cols="3" lg="3" md="4" sm="6" @click="router.push('/courses')">
-              <div class="sect3-div">
-                <img src="@/assets/images/section3_img7.jpeg" alt="">
-                <p class="purplep">Smart Contract Devlopment</p>
+              <div class="sect3-div" @mouseover="isHovering7 = true" @mouseleave="isHovering7 = false">
+                <img src="@/assets/images/section3_img7.jpeg" alt="" :class="isHovering7 ? 'scale-up': 'scale-down'">
+                <p class="purplep" :class="isHovering7 ? 'p-hover bounce': ''">Smart Contract Devlopment</p>
                 <p class="sec3p pt-0">Earn certificates that showcase your skills and knowledge.</p>
               </div>
             </v-col>
             <v-col cols="3" lg="3" md="4" sm="6" @click="router.push('/courses')">
-              <div class="sect3-div">
-                <img src="@/assets/images/section3_img8.jpeg" alt="">
-                <p class="purplep">Technical Writting in Web3</p>
+              <div class="sect3-div" @mouseover="isHovering8 = true" @mouseleave="isHovering8 = false">
+                <img src="@/assets/images/section3_img8.jpeg" alt="" :class="isHovering8 ? 'scale-up': 'scale-down'">
+                <p class="purplep" :class="isHovering8 ? 'p-hover bounce': ''">Technical Writting in Web3</p>
                 <p class="sec3p">Dynamic and interactive learning modules to keep you engaged.</p>
               </div>
             </v-col>
@@ -70,7 +70,18 @@
 
 <script>
 export default {
-
+  data() {
+    return {
+      isHovering1: false,
+      isHovering2: false,
+      isHovering3: false,
+      isHovering4: false,
+      isHovering5: false,
+      isHovering6: false,
+      isHovering7: false,
+      isHovering8: false
+    }
+  },
 }
 </script>
 
@@ -83,17 +94,21 @@ export default {
 .sect3-div {
   margin-bottom: 6vh;
 }
-.sect3-div img:hover {
+.img-hover {
   transform: scale(1.1);
   transition: 1s;
 }
+/* .sect3-div img:hover {
+  transform: scale(1.1);
+  transition: 1s;
+} */
 .sect3-header {
   font-size: 3em;
   font-weight: bolder;
   color: #000;
   margin: 0vh 0.5vw;
 }
-p.purplep:hover {
+.p-hover {
   text-decoration: underline;
 }
 .sect3-div img {
@@ -112,5 +127,8 @@ p.purplep {
 p.sec3p {
   color: #374151;
   font-weight: 500;
+}
+.bright {
+  background-blend-mode: luminosity;
 }
 </style>

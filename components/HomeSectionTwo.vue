@@ -1,6 +1,6 @@
 <template>
-    <v-row class="justify-center lee">
-        <v-col cols="5">
+    <v-row class="justify-center lee" ref="two">
+        <v-col cols="5" :class="'visible' ? key: ''">
           <div class="before">
             <div class="sec2-img"></div>
           </div>
@@ -25,7 +25,32 @@
 
 <script>
 export default {
-
+  data() {
+    return {
+      key: false
+    }
+  },
+  // computed: {
+  //   isVisible(el) {
+  //     const {top, left, bottom, right} = el.getBoun
+  //     const {innerWidth, innerHeight} = window
+  //     return ((top > 0 && top < innerHeight) || (bottom > 0 && bottom < innerHeight) || (left > 0 && left < innerWidth) || (right > 0 && right < innerWidth)) 
+  //   },
+  // },
+  methods: {
+    isVisible(el) {
+      const {top, left, bottom, right} = el.getBoundingClientRect()
+      const {innerWidth, innerHeight} = window
+      if ((top > 0 && top < innerHeight) || (bottom > 0 && bottom < innerHeight) || (left > 0 && left < innerWidth) || (right > 0 && right < innerWidth)) {
+        this.key = true
+      } else {
+        this.key = false
+      }
+    },
+  },
+  Created () {
+    isVisible(el)
+  }
 }
 </script>
 
@@ -70,5 +95,8 @@ p.faded-text {
 .sec2list {
   font-size: 1.2em;
   /* font-weight: bold; */
+}
+.visible {
+  display: none;
 }
 </style>
