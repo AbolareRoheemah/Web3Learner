@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
 .slide-in-left {
     animation: slide-in-left 0.7s ease-in-out forwards;
 }
@@ -94,3 +98,4 @@
       animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
     }
   }
+

@@ -7,13 +7,13 @@
       </v-col>
       <v-col cols="12" class="" md="">
         <v-row class="padd justify-space-between align-center mt-10">
-          <v-col cols="4" lg="4" md="4" sm="6" class="bfor-sec4">
+          <v-col cols="4" class="bfor-sec4 col-sm-6 col-12 col-md-4">
             <Testament image="@/assets/images/section4_img.jpeg"/>
           </v-col>
-          <v-col cols="4" lg="4" md="4" sm="6">
+          <v-col cols="4" class="col-sm-6 col-12 col-md-4">
             <Testament />
           </v-col>
-          <v-col cols="4" lg="4" md="4" sm="6">
+          <v-col cols="4" class="col-sm-6 col-12 col-md-4">
             <Testament />
           </v-col>
         </v-row>
@@ -52,4 +52,13 @@ export default {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+    .sect4-div {
+      margin-top: 3vh;
+    }
+    .padd {
+      margin-top: 0;
+      padding: 0;
+    }
+  }
 </style>

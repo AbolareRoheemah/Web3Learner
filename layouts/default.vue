@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app class="app-ctn-layer">
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
@@ -99,6 +99,7 @@ export default {
 
 <style scoped>
 .ctn {
-  background-color: white;
+  width: max-content;
+  overflow-x: hidden;
 }
 </style>

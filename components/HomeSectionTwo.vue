@@ -1,6 +1,6 @@
 <template>
     <v-row class="justify-center lee" ref="two">
-        <v-col cols="5" :class="'visible' ? key: ''">
+        <v-col cols="5" class="sec2-img-ctn" :class="key ? 'visible': ''">
           <div class="before">
             <div class="sec2-img"></div>
           </div>
@@ -17,7 +17,7 @@
               <li>Real-world projects</li>
               <li>Community support</li>
             </ul>
-          <a href="#contact"><v-btn variant="flat" size="x-large" class="bg-purple-darken-2 text-center mt-10" color="#6366f1">Join Us Now</v-btn></a>
+          <a href="#contact"><v-btn variant="flat" size="x-large" class="text-center mt-10 btn" color="#6366f1">Join Us Now</v-btn></a>
           </div>
         </v-col>
     </v-row>
@@ -58,10 +58,15 @@ export default {
 .lee {
   background-color: white;
   padding: 0 6vw;
+  widows: 100vw;
 }
 .sec2-text-ctn {
-  color: #000;
+  /* color: #000; */
   padding: 7vh 5vw 4vh 5vw;
+  height: auto;
+  width: 50vw;
+  height: auto;
+  background: #fff;
 }
 .before {
   height: 80vh;
@@ -98,5 +103,26 @@ p.faded-text {
 }
 .visible {
   display: none;
+}
+.btn {
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .lee {
+    padding: 0;
+  }
+  .sec2-img-ctn {
+      display: none;
+  }
+  .sec2-text-ctn {
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+    margin-left: 0;
+  }
+  p.faded-text {
+    width: inherit;
+    max-width: 90vw;
+  }
 }
 </style>

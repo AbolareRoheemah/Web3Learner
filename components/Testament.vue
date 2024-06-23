@@ -29,8 +29,9 @@ export default {
   min-height: 30vh;
   border-radius: 20px;
   padding: 5vh 2vw;
-  width: 90%;
-  height: 30vh;
+  width: 100%;
+  height: auto;
+  min-height: 30vh;
   margin-left: auto;
   margin-right: auto;
 }
@@ -70,4 +71,10 @@ export default {
 .sect4-text {
   text-align: left;
 }
+
+/* @media screen and (max-width: 768px) {
+  .sect4-div {
+    margin-top: 3vh;
+  }
+} */
 </style>
