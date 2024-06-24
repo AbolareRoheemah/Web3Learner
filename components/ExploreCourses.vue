@@ -7,8 +7,8 @@
         </v-col>
         <v-col cols="12">
             <v-row>
-                <v-col cols="4" v-for="(course, index) in [1, 2, 3, 4, 5, 6, 7, 8, 9]" :key="index">
-                    <Course />
+                <v-col cols="4" v-for="(course, index) in courses" :key="index" @mouseover="isHovering = true" @mouseleave="isHovering1 = false">
+                    <Course :details="course" :class="isHovering ? 'scale-up': 'scale-down'" />
                 </v-col>
             </v-row>
         </v-col>
@@ -18,17 +18,96 @@
 
 <script>
 export default {
-
+  data() {
+    return {
+      isHovering: false,
+      courses: [
+        {
+          title: 'Intro to Blockchain',
+          detail: 'Start with the basics of blockchain technology and its applications.',
+          duration: '4 weeks',
+          instructor: 'Jane Doe',
+          level: 'Beginner',
+          image: 'section3_img1.jpeg'
+        },
+        {
+          title: 'Smart Contract Development',
+          detail: 'Delve into the world of smart contracts and decentralized applications (dApps).',
+          duration: '6 weeks',
+          instructor: 'John Smith',
+          level: 'Intermediate',
+          image: 'section3_img2.jpeg'
+        },
+        {
+          title: 'Advanced dApp Development',
+          detail: 'Develop sophisticated decentralized applications using advanced techniques.',
+          duration: '5 weeks',
+          instructor: 'Jane Doe',
+          level: 'Beginner',
+          image: 'section3_img3.jpeg'
+        },
+        {
+          title: 'Decentralized Finance (DeFi) Mastery',
+          detail: 'Decentralized Finance (DeFi) Mastery',
+          duration: '7 weeks',
+          instructor: 'Jane Doe',
+          level: 'Beginner',
+          image: 'section3_img4.jpeg'
+        },
+        {
+          title: 'Intro to NFTs',
+          detail: 'Understand the fundamentals of non-fungible tokens (NFTs) and their uses.',
+          duration: '3 weeks',
+          instructor: 'Jane Doe',
+          level: 'Beginner',
+          image: 'section3_img5.jpeg'
+        },
+        {
+          title: 'Blockchain Security',
+          detail: 'Learn the best practices for ensuring the security of blockchain-based systems.',
+          duration: '10 weeks',
+          instructor: 'Jane Doe',
+          level: 'Beginner',
+          image: 'section3_img6.jpeg'
+        },
+        {
+          title: 'Ethereum Development',
+          detail: 'Build and deploy smart contracts on the Ethereum blockchain.',
+          duration: '5 weeks',
+          instructor: 'Jane Doe',
+          level: 'Beginner',
+          image: 'section3_img7.jpeg'
+        },
+        {
+          title: 'AI & Blockchain',
+          detail: 'Explore the intersection of artificial intelligence and blockchain technology.',
+          duration: '6 weeks',
+          instructor: 'Jane Doe',
+          level: 'Beginner',
+          image: 'section3_img8.jpeg'
+        },
+        {
+          title: 'Web3 Marketing',
+          detail: 'Gain skills in marketing strategies specifically for web3 projects.',
+          duration: '4 weeks',
+          instructor: 'Jane Doe',
+          level: 'Beginner',
+          image: 'section3_img1.jpeg'
+        },
+      ]
+    }
+  },
 }
 </script>
 
 <style scoped>
 .explore-ctn {
-    background-color: #f3f4f6;
+    background-color: #eef2ff;
     text-align: center;
     border-radius: 10px;
     box-shadow: 4px 4px #f3f4f6;
-    padding: 5vh 5vw;
+    padding: 5vh 5vw 10vh;
+    margin-bottom: 10vh;
 }
 .sect4-header {
   color: #000;

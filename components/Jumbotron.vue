@@ -1,20 +1,31 @@
 <template>
-  <div class="jumbotron">
-    <p class="slide-in-left" transition="slide-x-transition">Master <br>Web3 <br>Technologies</p>
-    <p class="learn slide-in-bottom">Learn in-demand web3 languages and technologies quickly and effectively with hands-on projects.</p>
-    <v-btn variant="flat" size="large" class="text-center py-5 jumb-btn" color="#6366f1">Get Started Today</v-btn>
+  <div class="jumbotron" :class="[details.home ? 'home' : details.courses ? 'courses': 'onecourse']">
+    <!-- <p class="slide-in-left" transition="slide-x-transition">{{details.hero}}</p> -->
+    <p class="slide-in-left" transition="slide-x-transition">{{details.herofirst}} <br class="d-xs-none d-print-block">{{details.herosec}} <br class="d-xs-none d-sm-print-block">{{details.herolast}}</p>
+    <p class="learn slide-in-bottom">{{details.detail}}</p>
+    <v-btn v-if="details.home" variant="flat" size="large" class="text-center py-5 jumb-btn" color="#6366f1" @click.prevent="$router.push('/courses')">{{details.btnText}}</v-btn>
+    <a href="#courses" v-else><v-btn variant="flat" size="large" class="text-center py-5 jumb-btn" color="#6366f1">{{details.btnText}}</v-btn></a>
   </div>
 </template>
 
 <script>
 export default {
-
+  props: {
+    details: {
+      type: Object,
+      default: () => {}
+    },
+  },
+  methods: {
+    // handlePush() {
+    //   this.$router.push('/courses')
+    // },
+  },
 }
 </script>
 
 <style scoped>
 .jumbotron {
-  background-image: url("../assets/images/Section1_image.jpeg");
   background-size: cover;
   /* background-color: red; */
   background-repeat: no-repeat;
@@ -22,6 +33,15 @@ export default {
   height: 90vh;
   padding: 20vh 0 15vh 15vw;
   color: #fff;
+}
+.home {
+  background-image: url("../assets/images/Section1_image.jpeg");
+}
+.courses {
+  background-image: url("../assets/images/courses.jpg");
+}
+.onecourse {
+  background-image: url("../assets/images/courses.jpg");
 }
 .jumbotron p:first-child {
   font-size: 5em;

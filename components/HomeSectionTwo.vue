@@ -17,7 +17,7 @@
               <li>Real-world projects</li>
               <li>Community support</li>
             </ul>
-          <a href="#contact"><v-btn variant="flat" size="x-large" class="text-center mt-10 btn" color="#6366f1">Join Us Now</v-btn></a>
+          <v-btn variant="flat" size="x-large" class="text-center mt-10 btn" color="#6366f1" @click="$router.push('/courses')">Join Us Now</v-btn>
           </div>
         </v-col>
     </v-row>

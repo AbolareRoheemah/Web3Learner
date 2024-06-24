@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12">
-      <Jumbotron />
+      <Jumbotron :details="jumboInfo"/>
     </v-col> 
     <v-col cols="12">
       <HomeSectionTwo />
@@ -22,7 +22,19 @@
 import Jumbotron from '../components/Jumbotron.vue'
 export default {
   components: { Jumbotron },
-  name: 'IndexPage'
+  name: 'IndexPage',
+  data() {
+    return {
+      jumboInfo: {
+        herofirst: 'Master',
+        herosec: 'Web3',
+        herolast: 'Technologies',
+        detail: 'Learn in-demand web3 languages and technologies quickly and effectively with hands-on projects.',
+        btnText: 'Get Started Today',
+        home: true
+      }
+    }
+  },
 }
 </script>
 

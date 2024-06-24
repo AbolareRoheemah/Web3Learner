@@ -1,14 +1,14 @@
 <template>
   <v-card elevation="10" class="crs-card text-left rounded-xl bg-white">
     <v-card-item class="bg-white">
-        <img src="@/assets/images/section3_img1.jpeg" alt="" class="course-img">
+        <img :src="require(`@/assets/images/${details.image}`)" alt="" class="course-img">
         <div class="div-ctn">
-            <p class="card-title">Intro to Blockchain</p>
-            <p class="card-text">Start with the basics of blockchain technology and its applications.</p>
+            <p class="card-title">{{details.title}}</p>
+            <p class="card-text">{{details.detail}}</p>
             <ul>
-                <li class="card-text">Duration: 4 weeks</li>
-                <li class="card-text">Instructor: Jane Doe</li>
-                <li class="card-text">Skill Level: Beginner</li>
+                <li class="card-text">Duration: {{details.duration}}</li>
+                <li class="card-text">Instructor: {{details.instructor}}</li>
+                <li class="card-text">Skill Level: {{details.level}}</li>
             </ul>
             <v-btn color="#6366f1" variant="flat" class="py-6 px-3 btn">Learn More</v-btn>
         </div>
@@ -18,7 +18,12 @@
 
 <script>
 export default {
-
+    props: {
+        details: {
+            type: Object,
+            default: () => {}
+        },
+    },
 }
 </script>
 
@@ -29,6 +34,11 @@ export default {
     background: #ffffff !important;
     color: #000000;
     cursor: pointer;
+    height: 80vh;
+    max-height: 80vh;
+}
+.crs-card:hover {
+
 }
 .course-img {
     width: auto;
@@ -54,6 +64,7 @@ ul {
 }
 .btn {
     font-weight: bold;
+    color: #fff;
     text-transform: capitalize;
 }
 </style>

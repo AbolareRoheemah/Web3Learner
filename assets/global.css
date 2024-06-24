@@ -1,6 +1,7 @@
 body {
     overflow-x: hidden;
     max-width: 100vw;
+    scroll-behavior: smooth;
 }
 .slide-in-left {
     animation: slide-in-left 0.7s ease-in-out forwards;
