@@ -1,7 +1,7 @@
 <template>
-  <v-card elevation="10" class="crs-card text-left rounded-xl bg-white">
+  <v-card elevation="2" class="crs-card text-left rounded-xl bg-white mb-10">
     <v-card-item class="bg-white">
-        <img :src="require(`@/assets/images/${details.image}`)" alt="" class="course-img">
+        <img :src="require(`@/assets/images/${details.image}`)" alt="" class="course-img" :class="[hovering ? 'img-hover': '']">
         <div class="div-ctn">
             <p class="card-title">{{details.title}}</p>
             <p class="card-text">{{details.detail}}</p>
@@ -10,7 +10,8 @@
                 <li class="card-text">Instructor: {{details.instructor}}</li>
                 <li class="card-text">Skill Level: {{details.level}}</li>
             </ul>
-            <v-btn color="#6366f1" variant="flat" class="py-6 px-3 btn">Learn More</v-btn>
+            <!-- <v-btn color="blue-darken-4" variant="outlined" class="py-6 px-3 btn">Learn More</v-btn> -->
+            <button class="btn" :class="{'btn-hover': hovering}">Learn More</button>
         </div>
     </v-card-item>
   </v-card>
@@ -23,6 +24,10 @@ export default {
             type: Object,
             default: () => {}
         },
+        hovering: {
+            type: Boolean,
+            default: () => false
+        }
     },
 }
 </script>
@@ -36,9 +41,7 @@ export default {
     cursor: pointer;
     height: 80vh;
     max-height: 80vh;
-}
-.crs-card:hover {
-
+    /* box-shadow: #eef2ff; */
 }
 .course-img {
     width: auto;
@@ -46,6 +49,11 @@ export default {
     height: 100%;
     max-height: 30vh;
     border-radius: 10px 10px 0px 0px;
+    opacity: 0.9;
+    transition: opacity ease-in-out;
+}
+.img-hover {
+    opacity: 1;
 }
 .div-ctn {
     color: #000000;
@@ -63,8 +71,16 @@ ul {
     margin: 2vh 0 3vh;
 }
 .btn {
-    font-weight: bold;
-    color: #fff;
+    font-weight: 500;
+    color: #6366f1;
     text-transform: capitalize;
+    border: 2px solid #6366f1;
+    padding: 1vh 1vw;
+    border-radius: 5px;
+}
+.btn-hover {
+    background: #6366f1;
+    border: none;
+    color: #fff;
 }
 </style>

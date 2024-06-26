@@ -7,9 +7,13 @@
         </v-col>
         <v-col cols="12">
             <v-row>
-                <v-col cols="4" v-for="(course, index) in courses" :key="index" @mouseover="isHovering = true" @mouseleave="isHovering1 = false">
-                    <Course :details="course" :class="isHovering ? 'scale-up': 'scale-down'" />
+              <template v-for="(course, index) in courses">
+                <v-col cols="12" md="4" :key="index">
+                  <v-hover v-slot="{ hover }">
+                    <Course :details="course" :class="[hover ? 'scale-up': 'scale-down']" :hovering="hover" />
+                  </v-hover>
                 </v-col>
+              </template>
             </v-row>
         </v-col>
     </v-row>
@@ -28,7 +32,7 @@ export default {
           duration: '4 weeks',
           instructor: 'Jane Doe',
           level: 'Beginner',
-          image: 'section3_img1.jpeg'
+          image: 'course-img1.jpg'
         },
         {
           title: 'Smart Contract Development',
@@ -36,7 +40,7 @@ export default {
           duration: '6 weeks',
           instructor: 'John Smith',
           level: 'Intermediate',
-          image: 'section3_img2.jpeg'
+          image: 'course-img2.jpg'
         },
         {
           title: 'Advanced dApp Development',
@@ -44,7 +48,7 @@ export default {
           duration: '5 weeks',
           instructor: 'Jane Doe',
           level: 'Beginner',
-          image: 'section3_img3.jpeg'
+          image: 'course-img3.jpg'
         },
         {
           title: 'Decentralized Finance (DeFi) Mastery',
@@ -52,7 +56,7 @@ export default {
           duration: '7 weeks',
           instructor: 'Jane Doe',
           level: 'Beginner',
-          image: 'section3_img4.jpeg'
+          image: 'course-img4.jpg'
         },
         {
           title: 'Intro to NFTs',
@@ -60,7 +64,7 @@ export default {
           duration: '3 weeks',
           instructor: 'Jane Doe',
           level: 'Beginner',
-          image: 'section3_img5.jpeg'
+          image: 'course-img5.jpg'
         },
         {
           title: 'Blockchain Security',
@@ -68,7 +72,7 @@ export default {
           duration: '10 weeks',
           instructor: 'Jane Doe',
           level: 'Beginner',
-          image: 'section3_img6.jpeg'
+          image: 'course-img6.jpg'
         },
         {
           title: 'Ethereum Development',
@@ -76,7 +80,7 @@ export default {
           duration: '5 weeks',
           instructor: 'Jane Doe',
           level: 'Beginner',
-          image: 'section3_img7.jpeg'
+          image: 'course-img7.jpg'
         },
         {
           title: 'AI & Blockchain',
@@ -84,7 +88,7 @@ export default {
           duration: '6 weeks',
           instructor: 'Jane Doe',
           level: 'Beginner',
-          image: 'section3_img8.jpeg'
+          image: 'course-img9.jpg'
         },
         {
           title: 'Web3 Marketing',
@@ -92,7 +96,7 @@ export default {
           duration: '4 weeks',
           instructor: 'Jane Doe',
           level: 'Beginner',
-          image: 'section3_img1.jpeg'
+          image: 'course-img8.jpg'
         },
       ]
     }
@@ -105,7 +109,7 @@ export default {
     background-color: #eef2ff;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 4px 4px #f3f4f6;
+    /* box-shadow: 4px 4px #f3f4f6; */
     padding: 5vh 5vw 10vh;
     margin-bottom: 10vh;
 }
